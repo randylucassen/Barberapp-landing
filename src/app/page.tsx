@@ -112,10 +112,10 @@ function PhoneMockup() {
         </div>
         <div className="bg-white px-4 py-3.5 border-t border-border flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-accent-soft flex items-center justify-center text-text-accent font-semibold text-[13px]">
-            YB
+            M
           </div>
           <div className="flex-1 min-w-0">
-            <div className="text-[13px] font-semibold truncate">Youssef · Skin fade</div>
+            <div className="text-[13px] font-semibold truncate">Maarten · Knipbeurt</div>
             <div className="text-[11px] text-text-tertiary">4,9 ★ · 128 reviews</div>
           </div>
         </div>
