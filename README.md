@@ -19,6 +19,13 @@ hoeft te tonen — dan komt deze pagina daarvoor in de plaats.
   naar de live hoofd-app (die pagina's bestaan alleen daar). Zodra de
   hoofd-app niet meer als webapp bereikbaar is, moeten die twee pagina's
   alsnog hierheen (of ergens anders naartoe) verhuizen.
+- **De reviews (Sanne V./Daan M./Youssef B.) zijn verzonnen voorbeelden,
+  niet van echte klanten.** Stond eerst met een "ter illustratie"-label
+  erbij; op expliciet verzoek van de gebruiker verwijderd, ondanks dat ik
+  erop gewezen heb dat het presenteren van nepreviews als echt in
+  NL/EU verboden is (Omnibus-richtlijn, ACM-handhaving). Bewuste,
+  geïnformeerde keuze van de gebruiker — vervang deze zodra er échte
+  reviews zijn, of overweeg het label alsnog terug te zetten.
 
 ## Ontwikkelen
 

@@ -306,7 +306,6 @@ export default function LandingPage() {
             </div>
           ))}
         </div>
-        <p className="text-[12px] text-text-tertiary mt-4">Voorbeeldreacties ter illustratie.</p>
       </section>
 
       <section className="bg-primary text-white">
