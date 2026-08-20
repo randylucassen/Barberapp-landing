@@ -66,10 +66,10 @@ const STEPS = [
 
 const REVIEWS = [
   {
-    name: "Sanne V.",
-    role: "Klant",
+    name: "Sander",
+    role: "Ondernemer",
     stars: 5,
-    quote: "Nooit meer wachten bij de kapper — mijn barber kwam precies op tijd en het resultaat was top.",
+    quote: "Ik liet een barber een hele knipdag bij ons op locatie doen — het hele team fris de deur uit, zonder dat iemand zijn bureau hoefde te verlaten.",
   },
   {
     name: "Daan M.",
