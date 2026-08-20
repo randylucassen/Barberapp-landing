@@ -1,5 +1,6 @@
 import { Scissors, MapPin, ShieldCheck, Star, Clock, CalendarCheck, CreditCard, Sparkles } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/company-info";
+import { getSiteUrl } from "@/lib/site-url";
 
 // Privacyverklaring/voorwaarden bestaan alleen in de hoofd-app
 // (groomy-mvp/groomy/src/app/privacybeleid|voorwaarden) — bewust niet
@@ -99,7 +100,7 @@ function StoreBadge({ label, sublabel }: { label: string; sublabel: string }) {
 
 function PhoneMockup() {
   return (
-    <div className="relative w-[240px] h-[490px] rounded-[36px] bg-primary p-2.5 shadow-2xl flex-shrink-0">
+    <div aria-hidden="true" className="relative w-[240px] h-[490px] rounded-[36px] bg-primary p-2.5 shadow-2xl flex-shrink-0">
       <div className="w-full h-full rounded-[28px] bg-white overflow-hidden flex flex-col">
         <div className="bg-primary text-white px-4 pt-6 pb-8 rounded-b-[24px]">
           <div className="text-[11px] text-white/60">Onderweg naar jou</div>
@@ -124,9 +125,48 @@ function PhoneMockup() {
   );
 }
 
+// Organization: echte, verifieerbare bedrijfsgegevens (COMPANY_INFO).
+// SoftwareApplication: bewust géén `aggregateRating`/reviews — de
+// sterren/aantallen op de pagina zijn illustratieve placeholders (zie
+// het commentaar bovenaan), en die als structured data opvoeren zou
+// nepreviews claimen richting zoekmachines — precies wat Google's
+// richtlijnen voor structured data verbieden. Eerlijke, beperkte schema
+// is beter dan opgepoetste maar valse schema.
+function StructuredData() {
+  const siteUrl = getSiteUrl();
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: COMPANY_INFO.name,
+        legalName: COMPANY_INFO.legalName,
+        url: siteUrl,
+        email: COMPANY_INFO.email,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: COMPANY_INFO.address,
+          postalCode: COMPANY_INFO.postalCode,
+          addressLocality: COMPANY_INFO.city,
+          addressCountry: "NL",
+        },
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: COMPANY_INFO.name,
+        applicationCategory: "LifestyleApplication",
+        operatingSystem: "iOS, Android",
+        url: siteUrl,
+      },
+    ],
+  };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />;
+}
+
 export default function LandingPage() {
   return (
     <div className="min-h-dvh bg-white text-text-primary">
+      <StructuredData />
       <header className="border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -142,6 +182,7 @@ export default function LandingPage() {
         </div>
       </header>
 
+      <main>
       <section className="max-w-6xl mx-auto px-6 pt-16 pb-20 flex flex-col lg:flex-row items-center gap-14">
         <div className="flex-1 max-w-xl">
           <div className="inline-flex items-center gap-1.5 bg-accent-soft text-text-accent text-[13px] font-medium rounded-pill px-3 py-1.5">
@@ -190,10 +231,10 @@ export default function LandingPage() {
 
         <div className="grid sm:grid-cols-2 gap-10 mt-12">
           <div>
-            <div className="flex items-center gap-2 text-[18px] font-semibold">
+            <h3 className="flex items-center gap-2 text-[18px] font-semibold">
               <CalendarCheck size={20} className="text-text-accent" />
               Voor klanten
-            </div>
+            </h3>
             <ul className="mt-4 flex flex-col gap-3">
               {KLANT_FEATURES.map((f) => (
                 <li key={f} className="flex items-start gap-2.5 text-[14px] text-text-secondary leading-[21px]">
@@ -204,10 +245,10 @@ export default function LandingPage() {
             </ul>
           </div>
           <div>
-            <div className="flex items-center gap-2 text-[18px] font-semibold">
+            <h3 className="flex items-center gap-2 text-[18px] font-semibold">
               <Scissors size={20} className="text-text-accent" />
               Voor barbers
-            </div>
+            </h3>
             <ul className="mt-4 flex flex-col gap-3">
               {BARBER_FEATURES.map((f) => (
                 <li key={f} className="flex items-start gap-2.5 text-[14px] text-text-secondary leading-[21px]">
@@ -229,7 +270,7 @@ export default function LandingPage() {
             {STEPS.map((step) => (
               <div key={step.number}>
                 <div className="text-[13px] font-bold text-text-tertiary">{step.number}</div>
-                <div className="text-[19px] font-semibold mt-1.5">{step.title}</div>
+                <h3 className="text-[19px] font-semibold mt-1.5">{step.title}</h3>
                 <div className="text-[14px] text-text-secondary leading-[21px] mt-2">{step.description}</div>
               </div>
             ))}
@@ -282,6 +323,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <footer className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between gap-6 text-[13px] text-text-tertiary">
         <div>
