@@ -41,8 +41,8 @@ const KLANT_FEATURES = [
 const BARBER_FEATURES = [
   "Bouw je eigen klantenkring op — geen stoel, geen wachtruimte nodig",
   "Bepaal zelf je diensten, prijzen en beschikbaarheid",
-  "Wekelijkse uitbetaling, automatisch geregeld via Stripe",
-  "Bescherming tegen no-shows: gemiste afspraken worden gecompenseerd",
+  "Uitbetaling binnen 24 uur na afronding, automatisch geregeld via Stripe",
+  "Zegt een klant op het laatste moment af? Dan krijg je alsnog een vergoeding",
   "Bouw een profiel op met portfolio en echte klantreviews",
 ];
 
@@ -81,7 +81,7 @@ const REVIEWS = [
     name: "Youssef B.",
     role: "Barber op Groomy",
     stars: 5,
-    quote: "Ik regel nu mijn hele agenda zelf en weet elke week precies wat er wordt uitbetaald.",
+    quote: "Ik regel nu mijn hele agenda zelf en heb mijn geld al binnen een dag na een knipbeurt.",
   },
 ];
 
@@ -287,7 +287,7 @@ export default function LandingPage() {
             <Clock size={18} className="text-text-accent" /> Live volgen onderweg
           </div>
           <div className="flex items-center gap-2 text-[14px] text-text-secondary">
-            <CreditCard size={18} className="text-text-accent" /> Wekelijkse uitbetaling voor barbers
+            <CreditCard size={18} className="text-text-accent" /> Uitbetaling binnen 24 uur voor barbers
           </div>
         </div>
 
