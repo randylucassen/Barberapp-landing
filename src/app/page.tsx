@@ -3,7 +3,7 @@ import { COMPANY_INFO } from "@/lib/company-info";
 import { getSiteUrl } from "@/lib/site-url";
 
 // Privacyverklaring/voorwaarden bestaan alleen in de hoofd-app
-// (groomy-mvp/groomy/src/app/privacybeleid|voorwaarden) — bewust niet
+// (KPPRTJE-mvp/KPPRTJE/src/app/privacybeleid|voorwaarden) — bewust niet
 // hier gedupliceerd (zou de juridische tekst op twee plekken moeten
 // bijhouden). Verwijst voorlopig naar de live hoofd-app; zodra die niet
 // meer als webapp bereikbaar is, moeten deze twee pagina's alsnog naar
@@ -14,7 +14,7 @@ const LEGAL_BASE_URL = "https://barberapp-vz1z.vercel.app";
 // echte KPPRTJE!-domein te staan zodra de app een native App Store/Play
 // Store-app wordt en dit domein niet meer de werkende webapp hoeft te
 // tonen. Bewust een apart Vercel-project/repo t.o.v. de hoofd-app
-// (groomy-mvp/groomy) — geen gedeelde build, geen gedeelde deployment,
+// (KPPRTJE-mvp/KPPRTJE) — geen gedeelde build, geen gedeelde deployment,
 // zodat een probleem aan de ene kant de andere nooit kan raken. Zie
 // CLAUDE.md in de hoofd-app-repo voor de volledige toelichting.
 //

@@ -1,7 +1,7 @@
 # Groomy landing
 
 Standalone marketingpagina voor Groomy — losstaand van de hoofd-app
-(`groomy-mvp/groomy`), met een eigen repo, Vercel-project en straks eigen
+(`KPPRTJE-mvp/KPPRTJE`), met een eigen repo, Vercel-project en straks eigen
 domein, zodat een probleem aan de ene kant de andere nooit kan raken.
 
 Bedoeld voor de fase zodra Groomy een echte native App Store/Play

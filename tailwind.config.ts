@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-// Zelfde design tokens als de hoofd-Groomy-app (groomy-mvp/groomy/
+// Zelfde design tokens als de hoofd-Groomy-app (KPPRTJE-mvp/KPPRTJE/
 // tailwind.config.ts) — dit project heeft geen eigen designsysteem,
 // hergebruikt bewust dezelfde kleuren/afrondingen zodat de marketingpagina
 // visueel bij de rest van Groomy blijft passen, ook al is de codebase

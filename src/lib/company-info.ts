@@ -1,4 +1,4 @@
-// Zelfde brongegevens als groomy-mvp/groomy/src/lib/company-info.ts —
+// Zelfde brongegevens als KPPRTJE-mvp/KPPRTJE/src/lib/company-info.ts —
 // bewust gedupliceerd i.p.v. gedeeld, want dit is nu een losstaand
 // project zonder afhankelijkheid van de hoofd-app-codebase.
 export const COMPANY_INFO = {
