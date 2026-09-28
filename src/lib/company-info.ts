@@ -2,7 +2,7 @@
 // bewust gedupliceerd i.p.v. gedeeld, want dit is nu een losstaand
 // project zonder afhankelijkheid van de hoofd-app-codebase.
 export const COMPANY_INFO = {
-  name: "Groomy",
+  name: "KPPRTJE!",
   legalName: "Barbershop Noviomagus",
   legalForm: "eenmanszaak",
   kvkNumber: "83716580",

@@ -10,8 +10,8 @@ import { getSiteUrl } from "@/lib/site-url";
 // dit project (of een eigen plek) verhuizen.
 const LEGAL_BASE_URL = "https://barberapp-vz1z.vercel.app";
 
-// Marketingpagina voor Groomy — losstaand project, bedoeld om op het
-// echte Groomy-domein te staan zodra de app een native App Store/Play
+// Marketingpagina voor KPPRTJE! — losstaand project, bedoeld om op het
+// echte KPPRTJE!-domein te staan zodra de app een native App Store/Play
 // Store-app wordt en dit domein niet meer de werkende webapp hoeft te
 // tonen. Bewust een apart Vercel-project/repo t.o.v. de hoofd-app
 // (groomy-mvp/groomy) — geen gedeelde build, geen gedeelde deployment,
@@ -79,7 +79,7 @@ const REVIEWS = [
   },
   {
     name: "Youssef B.",
-    role: "Barber op Groomy",
+    role: "Barber op KPPRTJE!",
     stars: 5,
     quote: "Ik regel nu mijn hele agenda zelf en heb mijn geld al binnen een dag na een knipbeurt.",
   },
@@ -219,13 +219,13 @@ export default function LandingPage() {
       </section>
 
       <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="text-[13px] font-semibold text-text-accent tracking-wide uppercase">Wat is Groomy</div>
+        <div className="text-[13px] font-semibold text-text-accent tracking-wide uppercase">Wat is KPPRTJE!</div>
         <h2 className="text-[30px] sm:text-[36px] font-bold tracking-[-0.01em] mt-2 max-w-2xl">
           Je eigen barber, waar je ook bent.
         </h2>
         <p className="text-[16px] text-text-secondary leading-[24px] mt-4 max-w-2xl">
           Geen wachtruimte, geen afspraak op locatie van de kapper — de barber komt naar jou. Veilig betalen,
-          live volgen, en achteraf beoordelen. Voor barbers is Groomy een eigen klantenkring zonder de kosten van
+          live volgen, en achteraf beoordelen. Voor barbers is KPPRTJE! een eigen klantenkring zonder de kosten van
           een fysieke zaak.
         </p>
 
