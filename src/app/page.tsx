@@ -1,6 +1,7 @@
 import { Scissors, MapPin, ShieldCheck, Star, Clock, CalendarCheck, CreditCard, Sparkles } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/company-info";
 import { getSiteUrl } from "@/lib/site-url";
+import { KSymbol } from "@/components/KSymbol";
 
 // Privacyverklaring/voorwaarden bestaan alleen in de hoofd-app
 // (KPPRTJE-mvp/KPPRTJE/src/app/privacybeleid|voorwaarden) — bewust niet
@@ -170,8 +171,8 @@ export default function LandingPage() {
       <header className="border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-[10px] bg-primary text-accent flex items-center justify-center">
-              <Scissors size={16} />
+            <div className="w-8 h-8 rounded-[10px] bg-primary flex items-center justify-center">
+              <KSymbol size={14} />
             </div>
             <span className="text-[17px] font-bold tracking-[-0.01em]">{COMPANY_INFO.name}</span>
           </div>
