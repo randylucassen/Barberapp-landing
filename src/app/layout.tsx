@@ -10,7 +10,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const title = "KPPRTJE! — Barbers aan huis, geboekt in seconden";
+const title = "KPPRTJE!: barbers aan huis, geboekt in seconden";
 const description =
   "KPPRTJE! brengt professionele barbers naar jouw locatie. Boek direct of plan vooruit, betaal veilig via escrow, en volg live waar je barber is.";
 const siteUrl = getSiteUrl();

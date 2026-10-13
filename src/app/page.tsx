@@ -3,14 +3,6 @@ import { COMPANY_INFO } from "@/lib/company-info";
 import { getSiteUrl } from "@/lib/site-url";
 import { KSymbol } from "@/components/KSymbol";
 
-// Privacyverklaring/voorwaarden bestaan alleen in de hoofd-app
-// (KPPRTJE-mvp/KPPRTJE/src/app/privacybeleid|voorwaarden) — bewust niet
-// hier gedupliceerd (zou de juridische tekst op twee plekken moeten
-// bijhouden). Verwijst voorlopig naar de live hoofd-app; zodra die niet
-// meer als webapp bereikbaar is, moeten deze twee pagina's alsnog naar
-// dit project (of een eigen plek) verhuizen.
-const LEGAL_BASE_URL = "https://barberapp-vz1z.vercel.app";
-
 // Marketingpagina voor KPPRTJE! — losstaand project, bedoeld om op het
 // echte KPPRTJE!-domein te staan zodra de app een native App Store/Play
 // Store-app wordt en dit domein niet meer de werkende webapp hoeft te
@@ -34,13 +26,13 @@ const STATS = [
 const KLANT_FEATURES = [
   "Vind een barber bij jou in de buurt op de kaart",
   "Boek nu voor direct, of plan vooruit voor later",
-  "Betaal veilig — het bedrag staat in escrow tot je knipbeurt is afgerond",
+  "Betaal veilig, je geld staat in escrow tot je knipbeurt is afgerond",
   "Volg live waar je barber is tijdens de rit naar je toe",
   "Sla favoriete barbers op en herboek in een paar tikken",
 ];
 
 const BARBER_FEATURES = [
-  "Bouw je eigen klantenkring op — geen stoel, geen wachtruimte nodig",
+  "Bouw je eigen klantenkring op, zonder stoel of wachtruimte nodig",
   "Bepaal zelf je diensten, prijzen en beschikbaarheid",
   "Uitbetaling binnen 24 uur na afronding, automatisch geregeld via Stripe",
   "Zegt een klant op het laatste moment af? Dan krijg je alsnog een vergoeding",
@@ -51,7 +43,7 @@ const STEPS = [
   {
     number: "01",
     title: "Zoek & kies",
-    description: "Bekijk barbers bij jou in de buurt, hun profiel, portfolio en reviews — en kies wie bij je past.",
+    description: "Bekijk barbers bij jou in de buurt met hun profiel, portfolio en reviews, en kies wie bij je past.",
   },
   {
     number: "02",
@@ -70,7 +62,7 @@ const REVIEWS = [
     name: "Sander",
     role: "Ondernemer",
     stars: 5,
-    quote: "Ik liet een barber een hele knipdag bij ons op locatie doen — het hele team fris de deur uit, zonder dat iemand zijn bureau hoefde te verlaten.",
+    quote: "Ik liet een barber een hele knipdag bij ons op locatie doen, het hele team fris de deur uit zonder dat iemand zijn bureau hoefde te verlaten.",
   },
   {
     name: "Daan M.",
@@ -195,7 +187,7 @@ export default function LandingPage() {
           </h1>
           <p className="text-[17px] text-text-secondary leading-[26px] mt-5">
             {COMPANY_INFO.name} brengt professionele barbers naar jouw locatie. Boek nu voor direct, of plan
-            vooruit voor later — je betaalt veilig via escrow, pas vrijgegeven zodra je knipbeurt is afgerond.
+            vooruit voor later. Je betaalt veilig via escrow, pas vrijgegeven zodra je knipbeurt is afgerond.
           </p>
           <div className="flex flex-wrap items-center gap-3 mt-8">
             <StoreBadge sublabel="Binnenkort op" label="App Store" />
@@ -206,6 +198,12 @@ export default function LandingPage() {
           </div>
         </div>
         <PhoneMockup />
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 pb-14">
+        <p className="text-[21px] sm:text-[25px] font-semibold tracking-[-0.01em] text-primary text-center max-w-2xl mx-auto">
+          Het eerste platform in Nederland dat barbers met klanten verbindt.
+        </p>
       </section>
 
       <section className="border-y border-border bg-surface">
@@ -225,7 +223,7 @@ export default function LandingPage() {
           Je eigen barber, waar je ook bent.
         </h2>
         <p className="text-[16px] text-text-secondary leading-[24px] mt-4 max-w-2xl">
-          Geen wachtruimte, geen afspraak op locatie van de kapper — de barber komt naar jou. Veilig betalen,
+          Geen wachtruimte, geen afspraak op locatie van de kapper: de barber komt naar jou. Veilig betalen,
           live volgen, en achteraf beoordelen. Voor barbers is KPPRTJE! een eigen klantenkring zonder de kosten van
           een fysieke zaak.
         </p>
@@ -339,10 +337,10 @@ export default function LandingPage() {
           </a>
         </div>
         <div className="flex flex-col gap-1.5">
-          <a href={`${LEGAL_BASE_URL}/voorwaarden`} className="text-text-accent">
+          <a href="/voorwaarden" className="text-text-accent">
             Algemene voorwaarden
           </a>
-          <a href={`${LEGAL_BASE_URL}/privacybeleid`} className="text-text-accent">
+          <a href="/privacybeleid" className="text-text-accent">
             Privacyverklaring
           </a>
         </div>
